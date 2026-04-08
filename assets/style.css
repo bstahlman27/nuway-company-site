@@ -1,0 +1,449 @@
+body {
+    margin: 0;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: white;
+    color: black;
+    overflow-y: scroll;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    color: white;
+    background: linear-gradient(to bottom, rgb(7, 4, 43) 0%, rgb(9, 17, 61) 100%);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 0 2rem;
+    column-gap: 2rem;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+#left-header {
+    margin-left: 8rem;
+}
+
+#logo-main{
+    height: 6em;
+    vertical-align: middle;
+    padding-bottom: 11px;
+}
+
+nav {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: rgb(121, 195, 238);
+}
+
+#right-header {
+    grid-column: 3;
+    text-align: left;
+    white-space: nowrap;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-right: 8rem;
+}
+
+#right-header h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+}
+
+#right-header h4 {
+    margin: 0 0 0.15rem 0;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+}
+
+.nav-cta {
+    text-decoration: none;
+    color: rgb(121, 195, 238);
+}
+
+footer {
+    background: rgb(7, 3, 43);
+    color: rgba(255,255,255,0.6);
+    padding: 3.5rem 0 0;
+    font-size: 0.9rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-grid {
+    max-width: 1100px;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns:1fr 1fr 2fr;
+    gap: 3rem;
+    padding: 2rem 2rem 2.5rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-self: end;
+    align-items: flex-end;
+}
+
+#logo-footer {
+    height: em;
+}
+
+.footer-brand p {
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.6;
+    max-width: 220px;
+    margin: 0.5rem 0 1.25rem;
+    text-align: right;
+}
+
+.socials {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0;
+}
+
+.socials img {
+    width: 22px;
+    height: 22px;
+    border-radius: 0;
+    box-shadow: none;
+    opacity: 0.8;
+    transition: opacity 180ms ease;
+}
+
+.socials img:hover {
+    opacity: 1;
+}
+
+.footer-col h4 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 1.25rem;
+}
+
+.footer-col p {
+    margin: 0 0 0.75rem 0;
+    color: rgba(255,255,255,0.6);
+}
+
+.footer-col a {
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    transition: color 180ms ease;
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+.footer-col a:hover { color: rgb(121, 195, 238) }
+
+#logo-footer {
+    height: 3em;
+    border-radius: 0;
+    box-shadow: none;
+    max-width: 160px;
+    object-fit: contain;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 1.25rem 2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.35);
+}
+
+.eye-catcher {
+    position: relative;
+    text-align: left;
+    background-image: url("images/IMG_4458.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-left: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+}
+
+.eye-catcher::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 20, 50, 0.80);
+    z-index: 0;
+}
+
+.eye-catcher > * {
+    position: relative;
+    z-index: 1;
+    max-width: 715px;
+}
+
+.eye-catcher h2 {
+    color: rgb(121, 195, 238);
+    font-size: 4rem;
+    margin-bottom: 0.1rem;
+    line-height: 4rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 2px 4px 12px rgba(0,0,0,0.6), 0 0 40px rgba(0,0,0,0.4);
+    font-weight: 60;
+    transform: skew(-5deg);
+}
+
+.eye-catcher h5 {
+    color: rgba(255, 255, 255, 0.699);
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    font-weight: 70;
+}
+
+.eye-catcher a {
+    display: inline-block;
+    align-self: flex-start;
+    background-color:rgb(177, 10, 10);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.eye-catcher a:hover {
+    transform: translateY(-2px);
+    background-color:rgb(136, 10, 10);
+}
+
+.sectionA, .sectionB {
+    padding: 2rem 10rem;
+}
+
+.sectionA {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.sectionA h4 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(136, 10, 10);
+}
+
+.section-right h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(7, 3, 43);
+    font-size: 1.2rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.15rem;
+}
+
+.section-right p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.sectionA img, .sectionB img {
+    margin-top: 3rem;
+    max-height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.section-right {
+    padding-left: 3rem;
+}
+
+
+.sectionB {
+    background: linear-gradient(to bottom, rgb(7, 4, 43) 0%, rgb(9, 17, 61) 100%);
+    color: white;
+    padding: 4rem 10rem;
+    text-align: center;
+}
+
+.process-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+    color:rgb(177, 10, 10);
+    margin-bottom: 0.5rem;
+}
+
+.sectionB h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: clamp(1.75rem, 3vw, 2.75rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.process-subtitle {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.6);
+    max-width: 600px;
+    margin: 0 auto 3.5rem;
+    line-height: 1.6;
+}
+
+.steps-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+}
+
+.step-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    max-width: 200px;
+    min-height: 160px;
+    padding: 1.5rem 1rem;
+    background-color: rgb(9, 17, 61);
+    border: 1px solid rgb(121, 195, 238);
+    border-radius: 10px;
+    transition: border-color 180ms ease;
+}
+
+.step-circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid rgb(177, 10, 10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: white;
+    background: rgba(255,255,255,0.08);
+    margin-bottom: 1rem;
+    transition: border-color 180ms ease;
+}
+
+.step-card h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.step-card p {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.6;
+}
+
+.step-connector {
+    flex-shrink: 0;
+    width: 40px;
+    height: 2px;
+    border-bottom: 2px dashed rgba(255,255,255,0.2);
+    margin-top: 32px;
+    align-self: flex-start;
+}
+
+.step-desc {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin-top: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+}
+
+.step-card:hover {
+    border: 2px solid rgb(177, 10, 10);
+}
+
+.step-card:hover .step-desc {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 0 1.5rem;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .sectionA {
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+    }
+
+    .section-right {
+        padding-left: 0;
+    }
+
+    .eye-catcher h2 {
+        font-size: 2.5rem;
+        line-height: 2.75rem;
+    }
+
+    .footer-brand {
+        text-align: left;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .sectionB { padding: 3rem 1.5rem; }
+
+    .steps-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .step-connector {
+        width: 2px;
+        height: 24px;
+        border-top: none;
+        border-left: 2px dashed rgba(255,255,255,0.2);
+        margin-top: 0;
+    }
+
+    .step-card { max-width: 100%; width: 100%; }
+}
