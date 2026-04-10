@@ -23,6 +23,13 @@ header {
     box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
+h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(177, 10, 10);
+    font-size: clamp(1.4rem, 2vw, 2rem);
+    margin-bottom: 2rem;
+}
+
 #left-header {
     margin-left: 8rem;
 }
@@ -52,6 +59,37 @@ nav a {
 nav a:hover {
     color: rgb(121, 195, 238);
 }
+
+nav a.nav-active {
+    color: rgb(121, 195, 238);
+    border-bottom: 2px solid rgb(121, 195, 238);
+    padding-bottom: 2px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1100;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: transform 300ms ease, opacity 300ms ease;
+}
+
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 #right-header {
     grid-column: 3;
@@ -152,6 +190,13 @@ footer {
 .footer-col p {
     margin: 0 0 0.75rem 0;
     color: rgba(255,255,255,0.6);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-col svg {
+    flex-shrink: 0;
 }
 
 .footer-col a {
@@ -173,7 +218,7 @@ footer {
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.08);
+    border-top: 2px solid rgba(255,255,255,0.1);
     padding: 1.25rem 2rem;
     text-align: center;
     font-size: 0.8rem;
@@ -275,9 +320,9 @@ footer {
     margin: 0;
 }
 
-.sectionA img, .sectionB img {
+.sectionA img {
     margin-top: 3rem;
-    max-height: 500px;
+    max-width: 500px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
@@ -286,6 +331,18 @@ footer {
     padding-left: 3rem;
 }
 
+.section-right p a {
+    color:rgb(177, 10, 10);
+    font-weight: 700;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-top: 0.85rem;
+    text-decoration: none;
+}
+
+.section-right p a:hover {
+    color: rgb(136, 10, 10)
+}
 
 .sectionB {
     background: linear-gradient(to bottom, rgb(7, 4, 43) 0%, rgb(9, 17, 61) 100%);
@@ -397,10 +454,702 @@ footer {
     margin-top: 0.5rem;
 }
 
+.sectionB a {
+    color: rgba(255,255,255,0.6);
+    display: inline-block;
+    margin-top: 2rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.sectionB a:hover {
+    color: rgb(121, 195, 238)
+}
+
+.sectionC {
+    padding: 1.2rem 10rem;
+    background: white;
+    text-align: center;
+}
+
+.sectionC h4 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(136, 10, 10);
+}
+
+.sectionC h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    color: rgb(7, 3, 43);
+    margin-bottom: 2.5rem;
+}
+
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin-inline: auto;
+    align-items: start;
+}
+
+.review-card {
+    background: white;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 12px;
+    padding: 2rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    min-height: 350px;
+}
+
+.review-avatar.initials {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #e8edf5;
+    color: rgb(7, 3, 43);
+    font-size: 1.3rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    box-shadow: none;
+}
+
+.review-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.review-meta img {
+    border-radius: 0;
+    box-shadow: none;
+    vertical-align: middle;
+    position: relative;
+    top: 2px;
+}
+
+.review-name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: rgb(7, 3, 43);
+}
+
+.review-divider {
+    color: rgba(0,0,0,0.2);
+}
+
+.review-stars {
+    color: #fbbc04;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+}
+
+.review-body {
+    position: relative;
+    max-height: 210px;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.review-body.expanded {
+    max-height: 1000px;
+}
+
+.review-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(to bottom, transparent, white);
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.review-body.expanded .review-fade {
+    opacity: 0;
+}
+
+.review-toggle {
+    background: none;
+    border: none;
+    color: rgb(177, 10, 10);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: auto;
+    margin-top: 0.5rem;
+    padding: 0;
+    transition: color 180ms ease;
+}
+
+.review-toggle:hover {
+    color: rgb(136, 10, 10);
+}
+
+.review-card p {
+    font-size: 0.9rem;
+    color: rgba(0,0,0,0.65);
+    line-height: 1.7;
+    text-align: center;
+    max-width: 100%;
+    margin: 0;
+}
+
+.reviews-link {
+    display: inline-block;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgb(7,3,43);
+    text-decoration: none;
+    padding-bottom: 2px;
+    transition: color 180ms ease, border-color 180ms ease;
+}
+
+.reviews-link:hover {
+    color: rgb(177, 10, 10);
+}
+
+.sectionD {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    padding: 5rem 10rem 0rem;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.mission-card {
+    background: rgb(240,246,250);
+    border-radius: 10px;
+    padding: 3rem  2.5rem;
+}
+
+.mission-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgb(177, 10, 10);
+    margin-bottom: 1.25rem;
+}
+
+.mission-card h2 {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(7, 3, 43);
+    font-size: clamp(1rem, 1.5vw, 1.4rem);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.sectionD-content h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(177, 10, 10);
+    margin-bottom: 0.25rem;
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+}
+
+.sectionD-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: rgba(0,0,0,0.8);
+    margin-bottom: 1.25rem;
+}
+
+.expect-eyebrow {
+    text-align: center;
+    padding-top: 1.2rem;
+    color: rgb(7, 3, 43)
+}
+
+.expect-eyebrow p {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.09rem;
+    text-transform: uppercase;
+    color:rgb(7, 3, 43);
+    margin-bottom: 0.5rem;
+}
+
+.sectionE {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr 1px 1fr 1px 1fr 1px 1fr;
+    gap: 1.5rem;
+    padding: 1rem 10rem;
+}
+
+.sectionE-card {
+    padding: 2rem 1.25rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.sectionE-icon {
+    color: rgb(177, 10, 10);
+}
+
+.sectionE-card p {
+    font-size: 0.875rem;
+    color: rgba(0,0,0,0.65);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.sectionE-divider {
+    width: 2px;
+    background-color: rgba(0,0,0,0.08);
+    align-self: stretch;
+}
+
+.contact-wrapper {
+    max-width: 1100px;
+    margin: 5rem auto 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1.75fr;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(255,255,255,0.1);
+    align-items: center;
+}
+
+.contact-info {
+    background: rgb(240,246,250);
+    color: rgb(7, 3, 43);
+    border-radius: 12px;
+    padding: 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contact-info h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:rgb(7, 3, 43);
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.contact-info p {
+    font-size: 0.95rem;
+    color: rgba(0,0,0,0.4);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.contact-detail {
+    display: flex;
+    align-items: center;
+    gap:  1.25rem;
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: rgb(177, 10, 10);
+}
+
+.contact-detail div span {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgb(7, 3, 43);
+    margin-bottom: 0.2rem;
+}
+
+.contact-detail div a, .contact-detail div strong {
+    color: rgb(7, 3, 43);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.contact-detail div a:hover {
+    color: rgb(121, 195, 238);
+}
+
+.contact-form-panel {
+    background: white;
+    padding: 4rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: rgb(7, 3, 43)
+}
+
+.optional {
+    font-weight: 400;
+    color: rgba(0,0,0,0.4);
+}
+
+.form-group input, .form-group textarea {
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    color: rgb(7, 3, 43);
+    outline: none;
+    transition: border-color 180ms ease, box-shadow 180ms ease;
+    resize: vertical;
+}
+
+.form-group input::placeholder, .form-group textarea::placeholder {
+    color: rgba(0,0,0,0.4);
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: rgb(9, 17, 61);
+    box-shadow: 0 0 0 3px rgba(9, 17, 61, 0.08);
+}
+
+button.form-submit {
+    background-color:rgb(177, 10, 10);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    transition: opacity 180ms ease, transform 180ms ease;
+    margin-top: 0.5rem;
+}
+
+button.form-submit:hover {
+    transform: translateY(-1px);
+    background-color:rgb(136, 10, 10);
+}
+
+#services {
+    padding-top: 6rem;
+}
+
+.sectionF {
+    padding: 3rem 10rem;
+    
+}
+
+.sectionF-header {
+    margin-bottom: 1rem;
+}
+
+.sectionF-header h2 {
+    margin: 0;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid rgba(0,0,0,0.08);
+}
+
+.sectionF-header p {
+    font-size: 0.95rem;
+    color: rgba(0,0,0,0.55);
+    line-height: 1.6;
+    margin: 0.4rem 0 0 0;
+}
+
+.service-grid3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.service-grid4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.service-card {
+    background: white;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 180ms ease, transform 180ms ease;
+    cursor: pointer;
+}
+
+.service-card.active {
+    border: 2px solid rgb(177, 10, 10);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.service-picture {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.service-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 300ms ease;
+}
+
+.service-card:hover .service-picture img {
+    transform: scale(1.04);
+}
+
+.service-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.service-body h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(7, 3, 43);
+    font-size: 1.1rem;
+    margin: 0 0 0.6rem 0;
+}
+
+.service-body p {
+    font-size: 0.9rem;
+    color: rgba(0,0,0,0.65);
+    line-height: 1.6;
+    flex: 1;
+    margin-bottom: 1.25rem;
+}
+
+.service-cta {
+    display: inline-block;
+    align-self: flex-start;
+    color: rgb(177, 10, 10);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 180ms ease;
+}
+
+.service-cta:hover {
+    color: rgb(136, 10, 10);
+}
+
+.services-footer-cta {
+    text-align: center;
+    padding: 3rem 10rem 2rem;
+    background: rgb(240, 246, 250);
+    margin-top: 1rem;
+}
+
+.services-footer-cta p {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(7, 3, 43);
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+.service-detail {
+    grid-column: 1 / -1;
+    display: none;
+    position: relative;
+    background: rgb(240, 246, 250);
+    border-left: 4px solid rgb(177, 10, 10);
+    border-radius: 8px;
+    padding: 2.5rem 2.5rem;
+    animation: slideDown 250ms ease;
+    margin: 0;
+}
+
+.service-detail.open {
+    display: block;
+}
+
+.service-detail h3 {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(7, 3, 43);
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+}
+
+.service-detail p {
+    font-size: 0.95rem;
+    color: rgba(0,0,0,0.7);
+    line-height: 1.7;
+    max-width: 800px;
+    margin-bottom: 1.25rem;
+}
+
+.detail-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    color: rgba(0,0,0,0.4);
+    cursor: pointer;
+    transition: color 180ms ease;
+}
+
+.detail-close:hover {
+    color: rgb(177, 10, 10);
+}
+
+.detail-inline {
+    position: relative;
+    background: rgb(240, 246, 250);
+    border-left: 4px solid rgb(177, 10, 10);
+    border-radius: 8px;
+    padding: 1.75rem 1.25rem;
+    animation: slideDown 250ms ease;
+    margin-top: 0.5rem;
+}
+
+.detail-inline h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(7, 3, 43);
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+}
+
+.detail-inline p {
+    font-size: 0.95rem;
+    color: rgba(0,0,0,0.7);
+    line-height: 1.7;
+    max-width: 800px;
+    margin-bottom: 1.25rem;
+}
+
+.detail-inline .detail-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    color: rgba(0,0,0,0.4);
+    cursor: pointer;
+    transition: color 180ms ease;
+}
+
+.detail-inline .detail-close:hover {
+    color: rgb(177, 10, 10);
+}
+
+.mobile-hint {
+    display: none;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 @media (max-width: 768px) {
     header {
+        grid-template-columns: auto 1fr auto;
         padding: 0 1.5rem;
     }
+
+    #left-header {
+        grid-column: 1;
+        margin-left: 0;
+    }
+
+    #logo-main{
+        height: 2.4em;
+        vertical-align: middle;
+        padding-bottom: 11px;
+    }
+
+    .hamburger {
+        display: flex;
+        grid-column: 3;
+    }
+
+    #right-header { display: none; }
+
+    nav {
+        grid-column: 2;
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgb(7, 4, 43);
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+        z-index: 1050;
+    }
+
+    nav.open { display: flex; }
+
+    nav a { font-size: 1.5rem; }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-brand {
+        text-align: left;
+        align-items: left;
+        justify-self: start;
+        align-items: flex-start;
+    }
+
+    .footer-brand p{
+        text-align: left;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -408,7 +1157,7 @@ footer {
 
     .sectionA {
         flex-direction: column;
-        padding: 2rem 1.5rem;
+        padding: 0rem 1.5rem 2rem;
     }
 
     .section-right {
@@ -420,13 +1169,19 @@ footer {
         line-height: 2.75rem;
     }
 
-    .footer-brand {
-        text-align: left;
+    .eye-catcher {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        height: 75vh;
     }
 
-    .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+    .eye-catcher a {
+        padding: 0.65rem 1.4rem;
+        font-size: 1rem;
+    }
+
+    .section-left img {
+        max-height: 300px;
     }
 
     .sectionB { padding: 3rem 1.5rem; }
@@ -443,7 +1198,94 @@ footer {
         border-top: none;
         border-left: 2px dashed rgba(255,255,255,0.2);
         margin-top: 0;
+        align-self: center;
     }
 
     .step-card { max-width: 100%; width: 100%; }
+
+    .sectionC { padding: 3rem 1.5rem; }
+
+    .reviews { grid-template-columns: 1fr; }
+
+    .sectionD {
+        grid-template-columns: 1fr;
+        padding: 2rem 1.5rem;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    .sectionD-content { padding: 0; }
+
+    .mission-card {
+        position: static;
+        order: 2;
+    }
+
+    .sectionE {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        padding: 3rem 1.5rem;
+    }
+
+    .sectionE-card { padding: 1rem 0.5rem; }
+
+    .sectionE-divider {
+        display: none;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        margin: 2rem 1rem;
+        border-radius: 8px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form-panel {
+        padding: 3rem 1.5rem;
+    }
+
+    .contact-info {
+        padding: 3rem 1.5rem;
+    }
+
+    .page-header {
+        padding: 2rem 1.5rem;
+    }
+
+    #services {
+        padding-top: 3rem;
+    }
+
+    .sectionF {
+        padding: 2rem 1.5rem;
+    }
+
+    .service-grid4,
+    .service-grid3 {
+        grid-template-columns: 1fr;
+    }
+
+    .service-picture {
+        height: 150px;
+    }
+
+    .service-detail {
+        margin: 0.5rem 1.5rem;
+        padding: 1.75rem 1.25rem;
+    }
+
+    .services-footer-cta {
+        padding: 2rem 1.5rem;
+    }
+
+    .mobile-hint {
+        display: block;
+        font-size: 0.8rem;
+        color: rgba(0,0,0,0.4);
+        margin-top: 0.5rem;
+        font-style: italic;
+    }
+
 }

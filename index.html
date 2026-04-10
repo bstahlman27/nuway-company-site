@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NuWay Roofing | Get Reliable Roofing Today</title>
     <link rel="stylesheet" href="assets/style.css">
-    <link rel="icon" type="image/ico" href="assets/images">
+    <link rel="icon" type="image/png" href="assets/images/NWR_favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/NWR_favicon.png">
 </head>
 <body>
     <header>
@@ -19,7 +20,7 @@
         </div>
         <div class="sectionA">
             <div class="section-left">
-                <img src="assets/images/4990902454267452949.jpg">
+                <img src="assets/images/IMG_3751.jpg">
             </div>
             <div class="section-right">
                 <h4>Why Choose NuWay Roofing?</h4>
@@ -33,6 +34,7 @@
                 <p>We treat your property as if it were our own. Protecting landscaping, minimizing dust and debris, and cleaning up thoroughly after each day of work. Our crews maintain professional behavior and a tidy jobsite throughout the project.</p>
                 <h3><b>Local service you can trust</b></h3>
                 <p>As a local company, we understand regional weather, code requirements, and material performance. We’re committed to serving our neighbors with dependable service, prompt follow-up, and continued support long after the job is done.</p>
+                <p><a href="about.html">Learn More About Us →</a></p>
             </div>
         </div>
         <div class="sectionB">
@@ -70,18 +72,66 @@
                     <span class="step-desc"><p>We review installations with you and provide warranties and maintenance guidance.</p></span>
                 </div>
             </div>
+            <p><a href="services.html">See Our Services →</a></p>
         </div>
-        <div class="sectionA">
+        <div class="sectionC">
             <h4>Testimonials</h4>
             <h3>See What Your Neighbors Think</h3>
             <div class="reviews">
-                <!--google reviews-->
+                <div class="review-card">
+                    <div class="review-avatar initials">EH</div>
+                    <div class="review-meta">
+                        <span class="review-name">Eva H</span>
+                        <span class="review-divider">|</span>
+                        <img src="https://www.google.com/s2/favicons?domain=google.com&sz=32" alt="Google" width="16" height="16">
+                        <span class="review-stars">★★★★★</span>
+                    </div>
+                    <div class="review-body">
+                        <p>These guys are absolute pros. They handled my insurance claim from start to finish, and I was especially impressed by how they held the insurance company accountable to ensure every bit of damage was covered. The roof looks incredible and the crew was fast and clean. If you want high-quality work and a team that truly fights for you, look no further!</p>
+                        <div class="review-fade"></div>
+                    </div>
+                    <button class="review-toggle" onclick="toggleReview(this)">Read more</button>
+                </div>
+                <div class="review-card">
+                    <div class="review-avatar initials">DN</div>
+                    <div class="review-meta">
+                        <span class="review-name">Danie N</span>
+                        <span class="review-divider">|</span>
+                        <img src="https://www.google.com/s2/favicons?domain=google.com&sz=32" alt="Google" width="16" height="16">
+                        <span class="review-stars">★★★★★</span>
+                    </div>
+                    <div class="review-body">
+                        <p>I recently worked with Nuway Roofing Company and I can’t recommend them enough. I worked directly with Rich, and he was incredible throughout the entire process. He even helped me get my insurance claim approved. I know absolutely nothing about this process, but Rich made everything easy to understand and kept me informed every step of the way. His communication was consistent, clear, and professional.<br><br>If you’re looking for a knowledgeable, reliable roofing company that truly cares about their customers, I highly recommend Nuway Roofing and their team!</p>
+                        <div class="review-fade"></div>
+                    </div>
+                    <button class="review-toggle" onclick="toggleReview(this)">Read more</button>
+                </div>
+                <div class="review-card">
+                    <div class="review-avatar initials">AS</div>
+                    <div class="review-meta">
+                        <span class="review-name">Angelina S</span>
+                        <span class="review-divider">|</span>
+                        <img src="https://www.google.com/s2/favicons?domain=google.com&sz=32" alt="Google" width="16" height="16">
+                        <span class="review-stars">★★★★★</span>
+                    </div>
+                    <div class="review-body">
+                        <p>Highly recommended NuWay roofing!! Their staff was extremely knowledgeable and they made the entire process as smooth as possible for us. My husband and I spoke to a few other roofers in the Easley area, but not one company treated us with the respect that NuWay did. Communication was effortless, every single person we talked to was happy to help at any time and we always got timely responses. Even their installation crew did a great job communicating with us and installing a beautiful new roof. Very professional service from a local business!</p>
+                        <div class="review-fade"></div>
+                    </div>
+                    <button class="review-toggle" onclick="toggleReview(this)">Read more</button>    
+                </div>
             </div>
+            <a href="https://www.google.com/search?q=nuway+roofing&oq=nuway+roofing&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIICAEQABgWGB4yCAgCEAAYFhgeMg0IAxAAGIYDGIAEGIoFMg0IBBAAGIYDGIAEGIoFMgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEIMTI5M2owajeoAgCwAgA&sourceid=chrome&ie=UTF-8&lqi=Cg1udXdheSByb29maW5nSOLf342QtICACFoXEAAQARgAGAEiDW51d2F5IHJvb2ZpbmeSARJyb29maW5nX2NvbnRyYWN0b3LgAQA#lkt=LocalPoiReviews&rlimm=6634668949990648053" target="blank" rel="noopener noreferrer" class="reviews-link">
+                See All Reviews on Google →
+            </a>
         </div>
     </main>
     <footer>
         <div data-include="assets/components/footer.html"></div>
     </footer>
     <script src="assets/scripts/HTMLInclude.min.js"></script>
+    <script src="assets/scripts/Reviews.js"></script>
+    <script src="assets/scripts/currentNavPage.js"></script>
+    <script src="assets/scripts/hamburger.js" defer></script>
 </body>
 </html>

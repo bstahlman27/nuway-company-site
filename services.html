@@ -3,45 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NuWay Roofing | Home</title>
+    <title>NuWay Roofing | Services</title>
     <link rel="stylesheet" href="assets/style.css">
-    <link rel=""icon" type="image/ico" href="assets/images">
+    <link rel="icon" type="image/png" href="assets/images/NWR_favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/NWR_favicon.png">
 </head>
 <body>
     <header>
         <div data-include="assets/components/header.html"></div>
     </header>
     <main id="services">
-        <div class="page-header">
-            <h1>Our Services</h1>
+        <div class="sectionF">
+            <div class="sectionF-header">
+                <h2>Roofing Services</h2>
+                <p>Whether it's a leak, storm damage, or an aging roof that needs replacing, we deliver high-quality solutions from start to finish.</p>
+            </div>
+            <div class="service-grid4">
+                <div class="service-card" onclick="toggleService('detail-inspections', this)">
+                    <div class="service-picture"><img src="assets/images/IMG_3758.jpg"></div>
+                    <div class="service-body">
+                        <h3>Roof Inspections & Estimates</h3>
+                        <p>Comprehensive roof inspections to assess condition, identify issues, and provide clear recommendations. Ideal for homeowners, buyers, and sellers.</p>
+                        <p class="mobile-hint">Tap to learn more</p>
+                    </div>
+                </div>
+                <div class="service-card" onclick="toggleService('detail-repairs', this)">
+                    <div class="service-picture"><img src="assets/images/NuWay_logo_black.png"></div>
+                    <div class="service-body">
+                        <h3>Roof Repairs</h3>
+                        <p>Targeted repairs for leaks, storm damage, missing shingles, flashing issues, and general wear—completed efficiently to extend the life of your roof.</p>
+                        <p class="mobile-hint">Tap to learn more</p>
+                    </div>
+                </div>
+                <div class="service-card" onclick="toggleService('detail-replacement', this)">
+                    <div class="service-picture"><img src="assets/images/e937a114-83d8-4cb8-b91b-86b0b0163c37.jpeg"></div>
+                    <div class="service-body">
+                        <h3>Roof Replacement</h3>
+                        <p>Complete roof replacement using quality materials and proven installation methods, tailored to your home and local conditions.</p>
+                        <p class="mobile-hint">Tap to learn more</p>
+                    </div>
+                </div>
+                <div class="service-card" onclick="toggleService('detail-storm', this)">
+                    <div class="service-picture"><img src="assets/images//ad84c0c9-4bac-4ae4-abfb-89578cfdcca0.png"></div>
+                    <div class="service-body">
+                        <h3>Storm & Insurance-Related Damage</h3>
+                        <p>Assistance with damage caused by wind, hail, or severe weather, including documentation support when working with insurance providers.</p>
+                        <p class="mobile-hint">Tap to learn more</p>
+                    </div>
+                </div>
+                <div class="service-detail" id="detail-inspections">
+                    <button class="detail-close" onclick="closeDetail('detail-inspections')">✕</button>
+                    <h3>Roof Inspections & Estimates</h3>
+                    <p>Whether you're buying a home, filing an insurance claim, or just want peace of mind, our inspections give you a complete picture of your roof's condition. We check for damaged or missing shingles, flashing issues, ventilation problems, and signs of leaks — then provide a clear written estimate with no surprises.</p>
+                    <a href="contact.html" class="service-cta">Get Your Free Inspection →</a>
+                </div>
+                <div class="service-detail" id="detail-repairs">
+                    <button class="detail-close" onclick="closeDetail('detail-repairs')">✕</button>
+                    <h3>Roof Repairs</h3>
+                    <p>From a single missing shingle to widespread storm damage, our crew handles repairs of all sizes quickly and correctly. We use materials that match your existing roof and back all repair work with our workmanship warranty.</p>
+                    <a href="contact.html" class="service-cta">Get Your Free Inspection →</a>
+                </div>
+                <div class="service-detail" id="detail-replacement">
+                    <button class="detail-close" onclick="closeDetail('detail-replacement')">✕</button>
+                    <h3>Roof Replacement</h3>
+                    <p>When repairs aren't enough, we handle full replacements from tear-off to final inspection. We work with industry-trusted shingle brands and ensure every installation meets local building codes. You'll get a clean job site at the end of every day and a roof built to last.</p>
+                    <a href="contact.html" class="service-cta">Get Your Free Inspection →</a>
+                </div>
+                <div class="service-detail" id="detail-storm">
+                    <button class="detail-close" onclick="closeDetail('detail-storm')">✕</button>
+                    <h3>Storm & Insurance-Related Damage</h3>
+                    <p>After a major storm, navigating insurance claims can be stressful. We document damage thoroughly, work alongside your adjuster, and make sure nothing gets missed. Our goal is to get your roof restored quickly and correctly, with as little hassle as possible on your end.</p>
+                    <a href="contact.html" class="service-cta">Get Your Free Inspection →</a>
+                </div>
+            </div>
         </div>
-        <div class="sectionA">
-            <h2>Roofing Services</h2>
-            <h3>Roof Inspections & Estimates</h3>
-            <p>Comprehensive roof inspections to assess condition, identify issues, and provide clear recommendations. Ideal for homeowners, buyers, and sellers.</p>
-            <h3>Roof Repairs</h3>
-            <p>Targeted repairs for leaks, storm damage, missing shingles, flashing issues, and general wear—completed efficiently to extend the life of your roof.</p>
-            <h3>Roof Replacement</h3>
-            <p>Complete roof replacement using quality materials and proven installation methods, tailored to your home and local conditions.</p>
-            <h3>Storm & Insurance-Related Damage</h3>
-            <p>Assistance with damage caused by wind, hail, or severe weather, including documentation support when working with insurance providers.</p>
-            <a href="roofservice.html">Learn More</a>
+        <div class="sectionF">
+            <div class="sectionF-header">
+                <h2>Window Services</h2>
+                <p>From drafty old windows to full custom installations, we improve your home's comfort, appearance, and energy efficiency with precise fitting and professional installation.</p>
+            </div>
+            <div class="service-grid3">
+                <div class="service-card" onclick="toggleService('detail-window-replacement', this)">
+                    <div class="service-picture"><img src="assets/images/NuWay_logo_black.png"></div>
+                    <div class="service-body">
+                        <h3>Full Window Replacement</h3>
+                        <p>Removal and replacement of outdated or damaged windows with modern, energy-efficient options.</p>
+                        <p class="mobile-hint">Tap to learn more</p>
+                    </div>
+                </div>
+                <div class="service-card" onclick="toggleService('detail-energy', this)">
+                    <div class="service-picture"><img src="assets/images/NuWay_logo_black.png"></div>
+                    <div class="service-body">
+                        <h3>Energy Efficiency Upgrades</h3>
+                        <p>Window solutions that help reduce drafts, improve insulation, and lower energy costs.</p>
+                        <p class="mobile-hint">Tap to learn more</p>
+                    </div>
+                </div>
+                <div class="service-card" onclick="toggleService('detail-custom', this)">
+                    <div class="service-picture"><img src="assets/images/NuWay_logo_black.png"></div>
+                    <div class="service-body">
+                        <h3>Custom Fit & Installation</h3>
+                        <p>Precision installation to ensure proper fit, weather sealing, and long-term performance.</p>
+                        <p class="mobile-hint">Tap to learn more</p>
+                    </div>
+                </div>
+                <div class="service-detail" id="detail-window-replacement">
+                    <button class="detail-close" onclick="closeDetail('detail-window-replacement')">✕</button>
+                    <h3>Full Window Replacement</h3>
+                    <p>Whether your windows are drafty, damaged, or simply outdated, we handle the full replacement process from removal to installation. We work with a range of styles and materials to match your home's look, and every installation is sealed and finished to last. New windows can immediately improve comfort, curb appeal, and energy efficiency.</p>
+                    <a href="contact.html" class="service-cta">Get Your Free Inspection →</a>
+                </div>
+                <div class="service-detail" id="detail-energy">
+                    <button class="detail-close" onclick="closeDetail('detail-energy')">✕</button>
+                    <h3>Energy Efficiency Upgrades (check this)</h3>
+                    <p>Older windows are one of the biggest sources of heat loss in a home. We install double and triple-pane options with low-E coatings and insulated frames that reduce drafts, keep temperatures stable, and lower your monthly energy bills. A worthwhile upgrade that pays for itself over time.</p>
+                    <a href="contact.html" class="service-cta">Get Your Free Inspection →</a>
+                </div>
+                <div class="service-detail" id="detail-custom">
+                    <button class="detail-close" onclick="closeDetail('detail-custom')">✕</button>
+                    <h3>Custom Fit & Installation</h3>
+                    <p>Not all windows are standard size — older homes especially tend to have openings that require custom-cut frames. We measure precisely, source the right fit, and install with tight weather sealing to prevent air and moisture intrusion. Every install is done right the first time so you don't have to worry about gaps, leaks, or callbacks.</p>
+                    <a href="contact.html" class="service-cta">Get Your Free Inspection →</a>
+                </div>
+            </div>
+            <div class="services-footer-cta">
+                <p>Choose NuWay Roofing for dependable expertise, straightforward communication, and quality results that protect your home.</p>
+            </div>
         </div>
-        <div class="sectionB">
-            <h2>Window Replacement Services</h2>
-            <h3>Full Window Replacement</h3>
-            <p> Removal and replacement of outdated or damaged windows with modern, energy-efficient options.</p>
-            <h3>Energy Efficient Upgrades</h3>
-            <p>Window solutions that help reduce drafts, improve insulation, and lower energy costs.</p>
-            <h3>Custom Fit & Installation</h3>
-            <p> Precision installation to ensure proper fit, weather sealing, and long-term performance.</p>
-            <a href="windowservice.html">Learn More</a>
-        </div>
-        <h4>Choose NuWay Roofing for dependable expertise, straightforward communication, and quality results that protect your home.</h4>
     </main>
     <footer>
         <div data-include="assets/components/footer.html"></div>
     </footer>
     <script src="assets/scripts/HTMLInclude.min.js"></script>
+    <script src="assets/scripts/Reviews.js"></script>
+    <script src="assets/scripts/currentNavPage.js"></script>
+    <script src="assets/scripts/showSection.js"></script>
+    <script src="assets/scripts/hamburger.js" defer></script>
 </body>
 </html>
