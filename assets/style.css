@@ -24,9 +24,9 @@ header {
 }
 
 h2 {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Markazi Text', Georgia, serif;
     color: rgb(177, 10, 10);
-    font-size: clamp(1.4rem, 2vw, 2rem);
+    font-size: clamp(1.6rem, 3vw, 3rem);
     margin-bottom: 2rem;
 }
 
@@ -146,6 +146,10 @@ footer {
     align-items: flex-end;
 }
 
+.email-icon {
+    color: rgba(255,255,255,0.55);
+}
+
 #logo-footer {
     height: em;
 }
@@ -255,12 +259,12 @@ footer {
 
 .eye-catcher h2 {
     color: rgb(121, 195, 238);
-    font-size: 4rem;
+    font-size: 4.5rem;
     margin-bottom: 0.1rem;
     line-height: 4rem;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Markazi Text', Georgia, serif;
     text-shadow: 2px 4px 12px rgba(0,0,0,0.6), 0 0 40px rgba(0,0,0,0.4);
-    font-weight: 60;
+    font-weight: 400;
     transform: skew(-5deg);
 }
 
@@ -302,14 +306,15 @@ footer {
 }
 
 .sectionA h4 {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Markazi Text', Georgia, serif;
+    font-size: 1.2rem;
     color: rgb(136, 10, 10);
 }
 
 .section-right h3 {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Markazi Text', Georgia, serif;
     color: rgb(7, 3, 43);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-top: 0.75rem;
     margin-bottom: 0.15rem;
 }
@@ -322,13 +327,18 @@ footer {
 
 .sectionA img {
     margin-top: 3rem;
-    max-width: 500px;
+    width: 1100px;
+    max-width: 100%;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    flex-shrink: 2;
+    min-width: 0;
 }
 
 .section-right {
     padding-left: 3rem;
+    flex-shrink: 1;
+    min-width: 0;
 }
 
 .section-right p a {
@@ -361,7 +371,7 @@ footer {
 }
 
 .sectionB h3 {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Markazi Text', Georgia, serif;
     font-size: clamp(1.75rem, 3vw, 2.75rem);
     font-weight: 700;
     margin-bottom: 1rem;
@@ -474,13 +484,14 @@ footer {
 }
 
 .sectionC h4 {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Markazi Text', Georgia, serif;
+    font-size: 1.2rem;
     color: rgb(136, 10, 10);
 }
 
 .sectionC h3 {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-family: 'Markazi Text', Georgia, serif;
+    font-size: clamp(1.7rem, 2.5vw, 2.5rem);
     color: rgb(7, 3, 43);
     margin-bottom: 2.5rem;
 }
@@ -647,18 +658,10 @@ footer {
 }
 
 .mission-card h2 {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Markazi Text', Georgia, serif;
     color: rgb(7, 3, 43);
-    font-size: clamp(1rem, 1.5vw, 1.4rem);
-    font-weight: 700;
-    line-height: 1.5;
-}
-
-.sectionD-content h1 {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: rgb(177, 10, 10);
-    margin-bottom: 0.25rem;
-    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+    font-size: clamp(1.4rem, 3vw, 1.6rem);
+    line-height: 1.25;
 }
 
 .sectionD-content p {
@@ -738,11 +741,11 @@ footer {
 }
 
 .contact-info h2 {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Markazi Text', Georgia, serif;
     color:rgb(7, 3, 43);
-    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+    font-size: clamp(1.7rem, 3vw, 2.75rem);
     font-weight: 700;
-    line-height: 1.3;
+    line-height: 1.1;
     margin: 0;
 }
 
@@ -872,8 +875,7 @@ button.form-submit:hover {
 }
 
 .sectionF {
-    padding: 3rem 10rem;
-    
+    padding: 3rem 10rem 0;
 }
 
 .sectionF-header {
@@ -949,9 +951,9 @@ button.form-submit:hover {
 }
 
 .service-body h3 {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Markazi Text', Georgia, serif;
     color: rgb(7, 3, 43);
-    font-size: 1.1rem;
+    font-size: 1.7rem;
     margin: 0 0 0.6rem 0;
 }
 
@@ -985,12 +987,13 @@ button.form-submit:hover {
 }
 
 .services-footer-cta p {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Markazi Text', Georgia, serif;
     color: rgb(7, 3, 43);
-    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    font-size: clamp(1.3rem, 2vw, 2.5rem);
     max-width: 700px;
     margin: auto;
-    line-height: 1.6;
+    line-height: 1.2;
+    transform: skew(-5deg);
 }
 
 .service-detail {
@@ -1000,7 +1003,8 @@ button.form-submit:hover {
     background: rgb(240, 246, 250);
     border-left: 4px solid rgb(177, 10, 10);
     border-radius: 8px;
-    padding: 2.5rem 2.5rem;
+    padding: 2.5rem;
+    padding-bottom: 4rem;
     animation: slideDown 250ms ease;
     margin: 0;
 }
@@ -1010,9 +1014,9 @@ button.form-submit:hover {
 }
 
 .service-detail h3 {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Markazi Text', Georgia, serif;
     color: rgb(7, 3, 43);
-    font-size: 1.3rem;
+    font-size: 1.9rem;
     margin-bottom: 0.75rem;
 }
 
@@ -1051,9 +1055,9 @@ button.form-submit:hover {
 }
 
 .detail-inline h3 {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Markazi Text', Georgia, serif;
     color: rgb(7, 3, 43);
-    font-size: 1.3rem;
+    font-size: 1.9rem;
     margin-bottom: 0.75rem;
 }
 
@@ -1121,16 +1125,23 @@ button.form-submit:hover {
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 40%;
         height: 100vh;
-        background: rgb(7, 4, 43);
+        background: linear-gradient(to bottom, rgb(7, 4, 43) 0%, rgb(9, 17, 61) 100%);
         justify-content: center;
         align-items: center;
         gap: 2.5rem;
         z-index: 1050;
+        left: unset;
+        right: 0;
+        transform: translateX(100%);
+        transition: transform 300ms ease;
     }
 
-    nav.open { display: flex; }
+    nav.open {
+        display: flex;
+        transform: translateX(0);
+    }
 
     nav a { font-size: 1.5rem; }
     
@@ -1165,14 +1176,14 @@ button.form-submit:hover {
     }
 
     .eye-catcher h2 {
-        font-size: 2.5rem;
+        font-size: 3rem;
         line-height: 2.75rem;
     }
 
     .eye-catcher {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
-        height: 75vh;
+        height: 80vh;
     }
 
     .eye-catcher a {
@@ -1228,6 +1239,12 @@ button.form-submit:hover {
 
     .sectionE-card { padding: 1rem 0.5rem; }
 
+    .sectionE-card:last-child {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: 50%;
+    }
+
     .sectionE-divider {
         display: none;
     }
@@ -1248,6 +1265,7 @@ button.form-submit:hover {
 
     .contact-info {
         padding: 3rem 1.5rem;
+        margin-top: 2.5rem;
     }
 
     .page-header {

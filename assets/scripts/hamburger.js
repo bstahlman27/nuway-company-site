@@ -40,10 +40,9 @@ setTimeout(() => {
             });
         }, {
             threshold: 0,
-            rootMargin: '-35% 0px -55% 0px'
+            rootMargin: '-10% 0px -55% 0px'
         });
 
         stepCards.forEach(card => observer.observe(card));
     }
-
 }, 100);
