@@ -31,7 +31,7 @@ setTimeout(() => {
                     desc.style.opacity = '1';
                     desc.style.marginTop='0.5rem';
                     entry.target.style.border = '2px solid rgb(177, 10, 10)';
-                } else {
+                } else if (entry.boundingClientRect.top > 0) {
                     desc.style.maxHeight = '0';
                     desc.style.opacity = '0';
                     desc.style.marginTop = '0';
@@ -40,7 +40,7 @@ setTimeout(() => {
             });
         }, {
             threshold: 0,
-            rootMargin: '-10% 0px -55% 0px'
+            rootMargin: '-10% 0px -40% 0px'
         });
 
         stepCards.forEach(card => observer.observe(card));
