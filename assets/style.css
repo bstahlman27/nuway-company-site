@@ -1166,16 +1166,7 @@ button.form-submit:hover {
         gap: 2rem;
     }
 
-    .sectionA {
-        flex-direction: column;
-        padding: 0rem 1.5rem 2rem;
-    }
-
-    .section-right {
-        padding-left: 0;
-    }
-
-    .eye-catcher h2 {
+     .eye-catcher h2 {
         font-size: 3rem;
         line-height: 2.75rem;
     }
@@ -1191,8 +1182,25 @@ button.form-submit:hover {
         font-size: 1rem;
     }
 
-    .section-left img {
+    .sectionA {
+        display: flex;
+        flex-direction: column;
+        padding: 0rem 1.5rem 2rem;
+    }
+
+    .section-right {
+        padding-left: 0;
+        order: 1;
+    }
+
+    .section-left {
+        order: 2;
+        margin-top: 1rem
+    }
+
+    .sectionA img {
         max-height: 300px;
+        width: 100%;
     }
 
     .sectionB { padding: 3rem 1.5rem; }
