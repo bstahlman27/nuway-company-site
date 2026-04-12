@@ -148,6 +148,8 @@ footer {
 
 .email-icon {
     color: rgba(255,255,255,0.55);
+    font-size: 1rem;
+    line-height: 1;
 }
 
 #logo-footer {
@@ -1128,7 +1130,8 @@ button.form-submit:hover {
         width: 40%;
         height: 100vh;
         background: linear-gradient(to bottom, rgb(7, 4, 43) 0%, rgb(9, 17, 61) 100%);
-        justify-content: center;
+        justify-content: flex-start;
+        padding-top: 5rem;
         align-items: center;
         gap: 2.5rem;
         z-index: 1050;
@@ -1195,12 +1198,13 @@ button.form-submit:hover {
 
     .section-left {
         order: 2;
-        margin-top: 1rem
+        margin-top: 0;
     }
 
     .sectionA img {
         max-height: 300px;
         width: 100%;
+        margin-top: 0;
     }
 
     .sectionB { padding: 3rem 1.5rem; }
