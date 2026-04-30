@@ -1,9 +1,9 @@
 setTimeout(() => {
-const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
 
     document.querySelectorAll('nav a').forEach(link => {
-        const linkPage = link.getAttribute('href').split('/').pop() || 'index.html';
-        if (linkPage === currentPage) {
+        const linkPath = link.getAttribute('href');
+        if (linkPath === currentPath || (currentPath === '/' && linkPath === '/')) {
             link.classList.add('nav-active');
         }
     });
